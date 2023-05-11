@@ -1,4 +1,4 @@
-package com.folioJoni.portfolio;
+package com.folioJoni2.portfolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

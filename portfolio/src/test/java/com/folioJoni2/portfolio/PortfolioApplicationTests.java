@@ -1,4 +1,4 @@
-package com.folioJoni.portfolio;
+package com.folioJoni2.portfolio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
