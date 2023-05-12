@@ -29,7 +29,10 @@ public class Persona {
     }
 
     
-    public Persona(Long id, String nombreYapellido, String fondo, String fotoPersona, String oficio, String contactoLink, String logoDerecha, String textoDerecho, String acercaDeMi) {
+    public Persona(Long id, String nombreYapellido, String fondo,
+                  String fotoPersona, String oficio, String contactoLink,
+                  String logoDerecha, String textoDerecho, String acercaDeMi) {
+        
         this.id = id;
         this.nombreYapellido = nombreYapellido;
         this.fondo = fondo;

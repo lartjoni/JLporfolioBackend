@@ -16,25 +16,7 @@ public interface IPersonaService {
     
     public void modificarPersona (Persona per);
     
-  /*
-    TK
-    public void modificarPersona (Persona per);
-    
-    
-   ---------------------el ultimo intento pero no salio--------------------------- 
-    public Persona modificarPersona (Long id);
-   ------------------------------------------------ 
-    
-    
-    @PutMapping ("/modificar/{id}")
-    public Persona modificarPersona (@PathVariable Long id){
-        return persoServ.modificarPersona(id);
-        }
-    
-    
-    
-    public void modificarPersona(Persona pers);
-    */
+  
     
     
 }

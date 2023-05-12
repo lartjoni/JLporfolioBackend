@@ -23,8 +23,9 @@ public class card1Controller {
     private IPersonaService persoServ;
     
     @PostMapping ("/new/persona")
-    public void agregarPersona (@RequestBody Persona pers) {
+    public String agregarPersona (@RequestBody Persona pers) {
         persoServ.crearPersona(pers);
+        return "se creo una persona correctamente";
     }
     
     @GetMapping ("/ver/personas")
@@ -34,8 +35,9 @@ public class card1Controller {
     }
     
     @DeleteMapping ("/delete/{id}")
-    public void borrarPersona (@PathVariable Long id) {
-        persoServ.borrarPersona(id);
+    public String borrarPersona (@PathVariable Long id) {
+            persoServ.borrarPersona(id);
+        return "la persona se elimino correctamente";
     }
     
     @GetMapping ("/buscar/{id}")
@@ -45,67 +47,13 @@ public class card1Controller {
     }
     
      @PutMapping ("/modificar")
-    public void modificarPersona (@RequestBody Persona pers) {
+    public String modificarPersona (@RequestBody Persona pers) {
         persoServ.crearPersona(pers);
+        return "la persona se modifico";
     }   
 
 
 
 }
-    
-    /*
-    TK
-
-    @PutMapping ("/modificar")
-    public void modificarPersona (@RequestBody Persona pers) {
-        persoServ.crearPersona(pers);
-    }
-
-    ---------------------el ultimo intento pero no salio--------------------------- 
-  @PutMapping ("/modificar/{id}")
-    public Persona modificarPersona (@PathVariable Long id, String nombreYapellido, String fondo, String fotoPersona, String oficio, String contactoLink, String logoDerecha, String textoDerecho, String acercaDeMi) {
-         Persona per= persoServ.modificarPersona(id);
-         
-         return per;
-        } 
-
-    ---------------------------------------------------------------
-devuelve lista pero no modifica y la otra forma del Mod8 el PUT se rompe
-    -----------------------------------------------------------------
-
-     para q devuelva un cartelito diciendo q se creo bien, solo cambiar:
-    public void a string y al final poner ese return, y asi 
-    con los demas si queremos cartelito
-    
-    @PostMapping ("/new/persona")
-    public String agregarPersona (@RequestBody Persona pers) {
-        persoServ.crearPersona(pers);
-        return  "Se creo una persona correctamente";
-    }
-
-
-
-    ---------------------------------------------------------------
-    el q va editar abajo
-    -----------------------------------------------------------------
-    editar:
-    
-    @PutMapping ("/modificar/{id}")
-    public Persona modificarPersona (@PathVariable Long id){
-        return persoServ.modificarPersona(id);
-        }
-    
-    
-    ---------------------------------------------------------------
-    el anterior abajo
-    -----------------------------------------------------------------
-    @PutMapping ("/modificar/persona")
-    public void modificarPersona (@RequestBody Persona pers) {
-        persoServ.modificarPersona(pers);
-    }
-    */
-    
-    
-    
-    //edit sera igual a save que si lo encuentra por id lo modifica, si no hay ninguno lo crea
+  
 

@@ -37,61 +37,7 @@ public class PersonaService implements IPersonaService {
         persoRepo.save(per);
     }
     
-    /*
-    TK
-    @Override
-    public void modificarPersona(Persona per) {
-        persoRepo.save(per);
-    }
-    
-    ---------------------el ultimo intento pero no salio--------------------------- 
-     @Override
-    public Persona modificarPersona(Long id) {
-        Persona per = persoRepo.findById(id).orElse(null);
-       persoRepo.save(per);
-       return per;
-    }
-    
-    --------------------------------------------
-    @Override
-    public Persona modificarPersona(Long id) {
-        Persona per = persoRepo.findById(id).orElse(null);
-       persoRepo.save(per);
-       return per;
-    }
-    
-    
-    --------------------------------------------
-    @Override
-    public Persona modificarPersona(Long id) {
-        per.setNombreYapellido(nombreYapellido);
-        per.setFondo(fondo);
-        per.setFotoPersona(fotoPersona);
-        per.setOficio(oficio);
-        per.setContactoLink(contactoLink);
-        per.setLogoDerecha(logoDerecha);
-        per.setTextoDerecho(textoDerecho);
-        per.setAcercaDeMi(acercaDeMi);
-    
-        persoRepo.save(per);
-    }
-    
-    -----------------------------------------------
-    @PutMapping ("/modificar/{id}")
-    public Persona modificarPersona (@PathVariable Long id){
-        return persoServ.modificarPersona(id);
-        }
-    
-    -----------------------------------------------
-    -----------------------------------------------
-    @Override
-    public void modificarPersona(Persona per) {
-     persoRepo.save(per);
-    }
-    
-    
-    */
-    
-    
+     
+   
     
 }
