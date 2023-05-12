@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,12 +44,35 @@ public class card1Controller {
         return persoServ.buscarPersona(id);
     }
     
-   @PutMapping ("/modificar/{id}")
-    public Persona modificarPersona (@PathVariable Long id){
-        return persoServ.modificarPersona(id);
-        }
+     @PutMapping ("/modificar")
+    public void modificarPersona (@RequestBody Persona pers) {
+        persoServ.crearPersona(pers);
+    }   
+
+
+
+}
     
     /*
+    TK
+
+    @PutMapping ("/modificar")
+    public void modificarPersona (@RequestBody Persona pers) {
+        persoServ.crearPersona(pers);
+    }
+
+    ---------------------el ultimo intento pero no salio--------------------------- 
+  @PutMapping ("/modificar/{id}")
+    public Persona modificarPersona (@PathVariable Long id, String nombreYapellido, String fondo, String fotoPersona, String oficio, String contactoLink, String logoDerecha, String textoDerecho, String acercaDeMi) {
+         Persona per= persoServ.modificarPersona(id);
+         
+         return per;
+        } 
+
+    ---------------------------------------------------------------
+devuelve lista pero no modifica y la otra forma del Mod8 el PUT se rompe
+    -----------------------------------------------------------------
+
      para q devuelva un cartelito diciendo q se creo bien, solo cambiar:
     public void a string y al final poner ese return, y asi 
     con los demas si queremos cartelito
@@ -58,6 +82,9 @@ public class card1Controller {
         persoServ.crearPersona(pers);
         return  "Se creo una persona correctamente";
     }
+
+
+
     ---------------------------------------------------------------
     el q va editar abajo
     -----------------------------------------------------------------
@@ -81,4 +108,4 @@ public class card1Controller {
     
     
     //edit sera igual a save que si lo encuentra por id lo modifica, si no hay ninguno lo crea
-}
+
