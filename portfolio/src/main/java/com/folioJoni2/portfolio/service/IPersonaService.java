@@ -14,4 +14,20 @@ public interface IPersonaService {
     
     public Persona buscarPersona (Long id);
     
+    public Persona modificarPersona (Long id);
+    
+  /*
+    public Persona modificarPersona (Long id);
+   ------------------------------------------------ 
+    @PutMapping ("/modificar/{id}")
+    public Persona modificarPersona (@PathVariable Long id){
+        return persoServ.modificarPersona(id);
+        }
+    
+    
+    
+    public void modificarPersona(Persona pers);
+    */
+    
+    
 }
