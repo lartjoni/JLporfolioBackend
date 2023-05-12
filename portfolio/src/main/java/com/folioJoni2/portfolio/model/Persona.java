@@ -19,6 +19,7 @@ public class Persona {
     private String fondo;
     private String fotoPersona;
     private String oficio;
+    private String textoContacto;
     private String contactoLink;
     private String logoDerecha;
     private String textoDerecho;
@@ -30,7 +31,7 @@ public class Persona {
 
     
     public Persona(Long id, String nombreYapellido, String fondo,
-                  String fotoPersona, String oficio, String contactoLink,
+                  String fotoPersona, String oficio,String textoContacto, String contactoLink,
                   String logoDerecha, String textoDerecho, String acercaDeMi) {
         
         this.id = id;
@@ -38,6 +39,7 @@ public class Persona {
         this.fondo = fondo;
         this.fotoPersona = fotoPersona;
         this.oficio = oficio;
+        this.textoContacto = textoContacto;
         this.contactoLink = contactoLink;
         this.logoDerecha = logoDerecha;
         this.textoDerecho = textoDerecho;
