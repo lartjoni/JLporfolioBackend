@@ -20,7 +20,7 @@ public class experienciaController {
     private IExperienciaService experServ;
     
     @PostMapping ("/experiencia/new")
-    public String agregarPersona (@RequestBody Experiencia expe) {
+    public String agregarExperiencia (@RequestBody Experiencia expe) {
         experServ.crearExperiencia(expe);
         return "se creo una experiencia correctamente";
     }
