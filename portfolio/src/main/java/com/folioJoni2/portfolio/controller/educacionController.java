@@ -28,7 +28,7 @@ public class educacionController {
         return "se creo una educacion correctamente";
     }
     
-    @GetMapping ("/educacione/ver")
+    @GetMapping ("/educacion/ver")
     @ResponseBody
     public List<Educacion> verEducaciones () {
         return educaServ.verEducaciones();
