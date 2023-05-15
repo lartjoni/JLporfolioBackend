@@ -27,7 +27,7 @@ public class proyectoController {
         return "se creo un proyecto correctamente";
     }
     
-     @GetMapping ("/proyectos/ver")
+     @GetMapping ("/proyecto/ver")
     @ResponseBody
     public List<Proyecto> verProyectos () {
         return proyeServ.verProyectos();

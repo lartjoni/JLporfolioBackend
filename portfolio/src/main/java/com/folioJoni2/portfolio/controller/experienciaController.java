@@ -27,7 +27,7 @@ public class experienciaController {
         return "se creo una experiencia correctamente";
     }
     
-    @GetMapping ("/experiencias/ver")
+    @GetMapping ("/experiencia/ver")
     @ResponseBody
     public List<Experiencia> verExperiencias () {
         return experServ.verExperiencias();

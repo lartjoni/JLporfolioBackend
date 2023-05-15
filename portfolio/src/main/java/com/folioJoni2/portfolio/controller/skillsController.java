@@ -48,7 +48,7 @@ public class skillsController {
     @PutMapping ("/skills/modificar")
     public String modificarSkills (@RequestBody Skills skil) {
         skillServ.crearSkills(skil);
-        return "la skills se modifico";
+        return "la skill se modifico";
     }
     
     

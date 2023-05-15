@@ -27,7 +27,7 @@ public class card1Controller {
         return "se creo una persona correctamente";
     }
     
-    @GetMapping ("/personas/ver")
+    @GetMapping ("/persona/ver")
     @ResponseBody
     public List<Persona> verPersonas () {
         return persoServ.verPersonas();
